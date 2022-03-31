@@ -1,0 +1,33 @@
+
+1. favourite_list returns an empty favourite item in list, remove that. => Done
+
+2. Adds_list api : how to apply filters? Do we have to do it locally? If not, then we will need to add some optional params to this api to accept discount filter and categories filters. App will sent comma separated ids of selected categories and discount. Also deal url is not coming in any api response. How are we supposed to redirect user to a web page without any url?  => Done
+
+
+3. How to update categories? We don’t have any api to update categories. Also we will need these user selected categories in login/user model =>?Done
+
+
+4. NEW API: get deal details by deal id. This is required while redirecting user from notifications to detail page directly. So create this new api. It will take a single param of deal id and then return complete info about that deal. =>Done
+
+
+5. Update profile api : photo is not being saved? I’m always getting photo = “” even after uploading pic.  =>Done
+
+6. Delete account api is not working. Returning 500 due to the code that you copied from trading project(There is not repost id in this project 😆). Please remove that and fix this issue. =>Done
+
+
+7. Settings api: is_notify is always coming as 1. It’s not storing the value that app is sending? =>Done
+
+8. Login user model does not contains the bio and premium status? We will need some info about this in all the places where we are getting user model in response. =>Done
+
+9. Terms url, about us url and privacy url are still pending.
+[8:30 PM, 11/8/2021] Parmod Ji Android: 10. As soon as a user sign ups, add a dummy but unique username to that user. Right now its shows empty. Add something like Firgun user 123
+
+
+UPDATE: 
+
+What’s Pending from app side:    
+1. Subscription purchase and its handling
+2. Interstitial ads on going to detail screen
+
+
+ALTER TABLE `users` ADD `guest_id` VARCHAR(255) NULL DEFAULT NULL AFTER `facebook_id`;
